@@ -11,7 +11,7 @@
 		21C55F4D1FD6E06E00987239 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C55F4C1FD6E06E00987239 /* ViewController.swift */; };
 		21C55F521FD6E06E00987239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C55F511FD6E06E00987239 /* Assets.xcassets */; };
 		21C55F551FD6E06E00987239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C55F531FD6E06E00987239 /* LaunchScreen.storyboard */; };
-		21C55F5F1FD6E0CE00987239 /* UIViewController+TopAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C55F5E1FD6E0CE00987239 /* UIViewController+TopAnchor.swift */; };
+		21C55F5F1FD6E0CE00987239 /* UIViewController+LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C55F5E1FD6E0CE00987239 /* UIViewController+LayoutAnchors.swift */; };
 		21C55F621FD6E52900987239 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 21C55F601FD6E52900987239 /* README.md */; };
 		21C55F631FD6E52900987239 /* CompatibleLayoutAnchors.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 21C55F611FD6E52900987239 /* CompatibleLayoutAnchors.podspec */; };
 		21F5FA1D1FD6E9C100F20B0B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21F5FA1C1FD6E9C100F20B0B /* ViewController.xib */; };
@@ -24,7 +24,7 @@
 		21C55F511FD6E06E00987239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21C55F541FD6E06E00987239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21C55F561FD6E06E00987239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21C55F5E1FD6E0CE00987239 /* UIViewController+TopAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopAnchor.swift"; sourceTree = "<group>"; };
+		21C55F5E1FD6E0CE00987239 /* UIViewController+LayoutAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+LayoutAnchors.swift"; sourceTree = "<group>"; };
 		21C55F601FD6E52900987239 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		21C55F611FD6E52900987239 /* CompatibleLayoutAnchors.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = CompatibleLayoutAnchors.podspec; sourceTree = "<group>"; };
 		21F5FA1C1FD6E9C100F20B0B /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		21C55F5D1FD6E0C000987239 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				21C55F5E1FD6E0CE00987239 /* UIViewController+TopAnchor.swift */,
+				21C55F5E1FD6E0CE00987239 /* UIViewController+LayoutAnchors.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -178,7 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C55F4D1FD6E06E00987239 /* ViewController.swift in Sources */,
-				21C55F5F1FD6E0CE00987239 /* UIViewController+TopAnchor.swift in Sources */,
+				21C55F5F1FD6E0CE00987239 /* UIViewController+LayoutAnchors.swift in Sources */,
 				21C55F4B1FD6E06E00987239 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  UIViewController+TopAnchor.swift
+//  UIViewController+LayoutAnchors.swift
 //  truffls-ios-app
 //
 //  Created by Lukas Würzburger on 12/5/17.
