@@ -10,7 +10,7 @@ If you're using iOS 11 safe area layout guide and NIBs for your interfaces the f
 
 But it should actually look like this.
 
-![alt text](https://github.com/truffls/compatible-layout-anchors-ios/raw/master/readme-images/before.gif "Broken layout constraints")
+![alt text](https://github.com/truffls/compatible-layout-anchors-ios/raw/master/readme-images/after.jpg "Fixed layout constraints")
 
 
 ### Install via Cocoapods
@@ -20,9 +20,7 @@ But it should actually look like this.
 
 ### How to use
 
-You have your layout ready in a NIB file ready with all layout constraints. Connect your view controller with the top constraints connected to the safe area top and the bottom constraints connected to the safe area bottom.
-
-You need to overwrite the top and the bottom constraints by using the `applyTopConstraint(_:)` and `applyBottomConstraint(_:)` functions.
+You have your layout in a NIB file ready with all layout constraints. Reference in view controller the top constraints connected to the safe area top anchor and the bottom constraints connected to the safe area bottom anchor. Use to `applyTopConstraint(_:)` and `applyBottomConstraint(_:)` to overwrite the top and the bottom constraints.
 
     class ViewController: UIViewController {
 
@@ -38,3 +36,7 @@ You need to overwrite the top and the bottom constraints by using the `applyTopC
     }
 
 Thats it.
+
+### Contributions
+
+Contributions are welcome!
