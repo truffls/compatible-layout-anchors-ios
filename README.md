@@ -15,7 +15,7 @@ But it should actually look like this.
 
 ### Install via Cocoapods
 
-`pod 'CompatibleLayoutAnchors', :tag => '0.1.0', :git => 'ssh://git@github.com/truffls/compatible-layout-anchors-ios.git'`
+`pod 'CompatibleLayoutAnchors', :tag => '0.1.1', :git => 'ssh://git@github.com/truffls/compatible-layout-anchors-ios.git'`
 
 
 ### How to use
