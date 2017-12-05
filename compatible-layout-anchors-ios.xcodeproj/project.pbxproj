@@ -30,6 +30,7 @@
 		21F5FA1C1FD6E9C100F20B0B /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		21F5FA201FD6EE2400F20B0B /* before.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = before.gif; sourceTree = "<group>"; };
 		21F5FA211FD6EF4700F20B0B /* after.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = after.jpg; sourceTree = "<group>"; };
+		21F5FA221FD6FB1200F20B0B /* setup-nib.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setup-nib.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 			children = (
 				21F5FA201FD6EE2400F20B0B /* before.gif */,
 				21F5FA211FD6EF4700F20B0B /* after.jpg */,
+				21F5FA221FD6FB1200F20B0B /* setup-nib.png */,
 			);
 			path = "readme-images";
 			sourceTree = "<group>";

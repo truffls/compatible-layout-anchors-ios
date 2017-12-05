@@ -6,16 +6,22 @@ An easy way to support iOS 11 safe area anchors old top/bottom layout guides. Co
 
 If you're using iOS 11 safe area layout guide and NIBs for your interfaces the fallback constraints for iOS 10 and older falls back to the super views anchors instead of the top/bottom layout guides.
 
+You setup your nib and it looks OK in Interface builder.
+
+![alt text](https://github.com/truffls/compatible-layout-anchors-ios/raw/master/readme-images/setup-nib.png "Setup NIB")
+
+But in iOS versions lower that 11 it looks broken.
+
 ![alt text](https://github.com/truffls/compatible-layout-anchors-ios/raw/master/readme-images/before.gif "Broken layout constraints")
 
-But it should actually look like this.
+It should actually look like this.
 
 ![alt text](https://github.com/truffls/compatible-layout-anchors-ios/raw/master/readme-images/after.jpg "Fixed layout constraints")
 
 
 ### Install via Cocoapods
 
-`pod 'CompatibleLayoutAnchors', :tag => '0.1.1', :git => 'ssh://git@github.com/truffls/compatible-layout-anchors-ios.git'`
+`pod 'CompatibleLayoutAnchors', :tag => '0.1.2', :git => 'ssh://git@github.com/truffls/compatible-layout-anchors-ios.git'`
 
 
 ### How to use
