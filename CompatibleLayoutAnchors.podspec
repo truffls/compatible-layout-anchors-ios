@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license = { :type => "MIT" }
   s.homepage = "https://github.com/truffls/compatible-layout-anchors-ios"
   s.platform = :ios
-  s.source = { :git => "git@github.com:truffls/compatible-layout-anchors-ios.git", :tag => "0.1.3" }
+  s.source = { :git => "https://github.com/truffls/compatible-layout-anchors-ios.git", :tag => "0.1.3" }
   s.source_files = "Pod/**/*.swift"
   s.ios.deployment_target = "9.0"
   s.ios.frameworks = 'UIKit'
