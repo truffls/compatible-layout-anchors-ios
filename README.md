@@ -1,5 +1,9 @@
 ![alt text](https://github.com/truffls/compatible-layout-anchors-ios/raw/master/readme-images/logo.png "Compatible Layout Anchors")
 
+![Swift Version](https://img.shields.io/badge/swift-3.2-orange.svg "Swift 3.2")
+![Platform Compatibility](https://img.shields.io/badge/platform-ios-lightgrey.svg "Platform iOS")
+![Pod version](https://img.shields.io/badge/pod-v1.6-blue.svg "Pod version 1.6")
+
 An easy way to support iOS 11 safe area anchors old top/bottom layout guides. CompatibleLayoutAnchors takes away the boiler plate code to check which layout anchors to use.
 
 
