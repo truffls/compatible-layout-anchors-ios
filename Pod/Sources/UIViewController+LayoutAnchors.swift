@@ -36,21 +36,21 @@ extension UIViewController {
         return views.filter({ $0 != view }).first
     }
 
-    public func applyTopConstraint(_ constraint: NSLayoutConstraint) -> NSLayoutConstraint {
+    public func compatibleTopConstraint(_ constraint: NSLayoutConstraint) -> NSLayoutConstraint {
         guard let subview = subview(from: constraint) else {
             return constraint
         }
-        return applyVerticalConstraint(constraint, firstAnchor: subview.topAnchor, secondAnchor: topAnchor)
+        return compatibleVerticalConstraint(constraint, firstAnchor: subview.topAnchor, secondAnchor: topAnchor)
     }
 
-    public func applyBottomConstraint(_ constraint: NSLayoutConstraint) -> NSLayoutConstraint {
+    public func compatibleBottomConstraint(_ constraint: NSLayoutConstraint) -> NSLayoutConstraint {
         guard let subview = subview(from: constraint) else {
             return constraint
         }
-        return applyVerticalConstraint(constraint, firstAnchor: bottomAnchor, secondAnchor: subview.bottomAnchor)
+        return compatibleVerticalConstraint(constraint, firstAnchor: bottomAnchor, secondAnchor: subview.bottomAnchor)
     }
 
-    private func applyVerticalConstraint(_ constraint: NSLayoutConstraint, firstAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, secondAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>) -> NSLayoutConstraint {
+    private func compatibleVerticalConstraint(_ constraint: NSLayoutConstraint, firstAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, secondAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>) -> NSLayoutConstraint {
         let newConstraint = firstAnchor.constraint(equalTo: secondAnchor, constant: constraint.constant)
         view.removeConstraint(constraint)
         view.addConstraint(newConstraint)
