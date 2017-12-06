@@ -34,9 +34,10 @@ Add following to your `Podfile`:
 
 ### How to use
 
-You have your layout in a NIB file ready with all layout constraints. Reference in your view controller the top constraints connected to the safe area top anchor and the bottom constraints connected to the safe area bottom anchor. Use `applyTopConstraint(_:)` and `applyBottomConstraint(_:)` to reassign the top and bottom constraints with the appropriate constraints.
+You have your layout in a NIB file ready with all layout constraints. Reference in your view controller the top constraints connected to the safe area top anchor and the bottom constraints connected to the safe area bottom anchor. Use `compatibleTopConstraint(_:)` and `compatibleBottomConstraint(_:)` to reassign the top and bottom constraints with the appropriate constraints.
 
-    myConstraint = applyTopConstraint(myConstraint)
+    myTopConstraint = compatibleTopConstraint(myTopConstraint)
+    myBottomConstraint = compatibleBottomConstraint(myBottomConstraint)
 
 ### Example
 
@@ -50,8 +51,8 @@ This code fits to the screenshots above.
         override func viewDidLoad() {
             super.viewDidLoad()
 
-            headlineLabelTopConstraint = applyTopConstraint(headlineLabelTopConstraint)
-            footnoteLabelBottomConstraint = applyBottomConstraint(footnoteLabelBottomConstraint)
+            headlineLabelTopConstraint = compatibleTopConstraint(headlineLabelTopConstraint)
+            footnoteLabelBottomConstraint = compatibleBottomConstraint(footnoteLabelBottomConstraint)
         }
     }
 
