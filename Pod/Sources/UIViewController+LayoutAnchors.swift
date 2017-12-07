@@ -8,6 +8,11 @@
 
 import UIKit
 
+public enum CompatibleLayoutAnchor {
+    case top
+    case bottom
+}
+
 extension UIViewController {
 
     public var topAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor> {
@@ -36,17 +41,17 @@ extension UIViewController {
         return views.filter({ $0 != view }).first
     }
 
-    public func compatibleTopConstraint(_ constraint: inout NSLayoutConstraint!) {
+    public func assignCompatibleConstraint(_ constraint: inout NSLayoutConstraint!, for anchor: CompatibleLayoutAnchor) {
         guard let subview = subview(from: constraint) else { return }
-        compatibleVerticalConstraint(&constraint, firstAnchor: subview.topAnchor, secondAnchor: topAnchor)
+        switch anchor {
+        case .top:
+            assignCompatibleVerticalConstraint(&constraint, firstAnchor: subview.topAnchor, secondAnchor: topAnchor)
+        case .bottom:
+            assignCompatibleVerticalConstraint(&constraint, firstAnchor: bottomAnchor, secondAnchor: subview.bottomAnchor)
+        }
     }
 
-    public func compatibleBottomConstraint(_ constraint: inout NSLayoutConstraint!) {
-        guard let subview = subview(from: constraint) else { return }
-        compatibleVerticalConstraint(&constraint, firstAnchor: bottomAnchor, secondAnchor: subview.bottomAnchor)
-    }
-
-    private func compatibleVerticalConstraint(_ constraint: inout NSLayoutConstraint!, firstAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, secondAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>) {
+    private func assignCompatibleVerticalConstraint(_ constraint: inout NSLayoutConstraint!, firstAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, secondAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>) {
         view.removeConstraint(constraint)
         constraint = firstAnchor.constraint(equalTo: secondAnchor, constant: constraint.constant)
         view.addConstraint(constraint)
