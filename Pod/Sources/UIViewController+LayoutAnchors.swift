@@ -36,24 +36,19 @@ extension UIViewController {
         return views.filter({ $0 != view }).first
     }
 
-    public func compatibleTopConstraint(_ constraint: NSLayoutConstraint) -> NSLayoutConstraint {
-        guard let subview = subview(from: constraint) else {
-            return constraint
-        }
-        return compatibleVerticalConstraint(constraint, firstAnchor: subview.topAnchor, secondAnchor: topAnchor)
+    public func compatibleTopConstraint(_ constraint: inout NSLayoutConstraint!) {
+        guard let subview = subview(from: constraint) else { return }
+        compatibleVerticalConstraint(&constraint, firstAnchor: subview.topAnchor, secondAnchor: topAnchor)
     }
 
-    public func compatibleBottomConstraint(_ constraint: NSLayoutConstraint) -> NSLayoutConstraint {
-        guard let subview = subview(from: constraint) else {
-            return constraint
-        }
-        return compatibleVerticalConstraint(constraint, firstAnchor: bottomAnchor, secondAnchor: subview.bottomAnchor)
+    public func compatibleBottomConstraint(_ constraint: inout NSLayoutConstraint!) {
+        guard let subview = subview(from: constraint) else { return }
+        compatibleVerticalConstraint(&constraint, firstAnchor: bottomAnchor, secondAnchor: subview.bottomAnchor)
     }
 
-    private func compatibleVerticalConstraint(_ constraint: NSLayoutConstraint, firstAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, secondAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>) -> NSLayoutConstraint {
-        let newConstraint = firstAnchor.constraint(equalTo: secondAnchor, constant: constraint.constant)
+    private func compatibleVerticalConstraint(_ constraint: inout NSLayoutConstraint!, firstAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, secondAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>) {
         view.removeConstraint(constraint)
-        view.addConstraint(newConstraint)
-        return newConstraint
+        constraint = firstAnchor.constraint(equalTo: secondAnchor, constant: constraint.constant)
+        view.addConstraint(constraint)
     }
 }

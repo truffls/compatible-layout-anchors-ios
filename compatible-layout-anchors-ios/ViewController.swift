@@ -15,9 +15,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        headlineLabelTopConstraint = compatibleTopConstraint(headlineLabelTopConstraint)
-        footnoteLabelBottomConstraint = compatibleBottomConstraint(footnoteLabelBottomConstraint)
+        compatibleTopConstraint(&headlineLabelTopConstraint)
+        compatibleBottomConstraint(&footnoteLabelBottomConstraint)
     }
 }
-
