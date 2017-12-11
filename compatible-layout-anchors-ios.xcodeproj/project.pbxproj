@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212C8B271FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C8B261FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests.swift */; };
 		21C55F4B1FD6E06E00987239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C55F4A1FD6E06E00987239 /* AppDelegate.swift */; };
 		21C55F4D1FD6E06E00987239 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C55F4C1FD6E06E00987239 /* ViewController.swift */; };
 		21C55F521FD6E06E00987239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C55F511FD6E06E00987239 /* Assets.xcassets */; };
@@ -18,8 +19,22 @@
 		21F5FA241FD70A2B00F20B0B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F5FA231FD70A2B00F20B0B /* logo.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		212C8B291FDF3F4500AF4437 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21C55F3F1FD6E06E00987239 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21C55F461FD6E06E00987239;
+			remoteInfo = CompatibleLayoutAnchors;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		21C55F471FD6E06E00987239 /* compatible-layout-anchors-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "compatible-layout-anchors-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		212C8B161FDF384500AF4437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		212C8B241FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompatibleLayoutAnchorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		212C8B261FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibleLayoutAnchorsTests.swift; sourceTree = "<group>"; };
+		212C8B281FDF3F4500AF4437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21C55F471FD6E06E00987239 /* CompatibleLayoutAnchors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompatibleLayoutAnchors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C55F4A1FD6E06E00987239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C55F4C1FD6E06E00987239 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21C55F511FD6E06E00987239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		212C8B211FDF3F4500AF4437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C55F441FD6E06E00987239 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,6 +68,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		212C8B131FDF384500AF4437 /* compatible-layout-anchors-UITests */ = {
+			isa = PBXGroup;
+			children = (
+				212C8B161FDF384500AF4437 /* Info.plist */,
+			);
+			path = "compatible-layout-anchors-UITests";
+			sourceTree = "<group>";
+		};
+		212C8B251FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests */ = {
+			isa = PBXGroup;
+			children = (
+				212C8B261FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests.swift */,
+				212C8B281FDF3F4500AF4437 /* Info.plist */,
+			);
+			path = CompatibleLayoutAnchorsTests;
+			sourceTree = "<group>";
+		};
 		21C55F3E1FD6E06E00987239 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +93,8 @@
 				21C55F601FD6E52900987239 /* README.md */,
 				21C55F5C1FD6E0B900987239 /* Pod */,
 				21C55F491FD6E06E00987239 /* compatible-layout-anchors-ios */,
+				212C8B131FDF384500AF4437 /* compatible-layout-anchors-UITests */,
+				212C8B251FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests */,
 				21C55F481FD6E06E00987239 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +102,8 @@
 		21C55F481FD6E06E00987239 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21C55F471FD6E06E00987239 /* compatible-layout-anchors-ios.app */,
+				21C55F471FD6E06E00987239 /* CompatibleLayoutAnchors.app */,
+				212C8B241FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,9 +151,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		21C55F461FD6E06E00987239 /* compatible-layout-anchors-ios */ = {
+		212C8B231FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21C55F591FD6E06E00987239 /* Build configuration list for PBXNativeTarget "compatible-layout-anchors-ios" */;
+			buildConfigurationList = 212C8B2B1FDF3F4500AF4437 /* Build configuration list for PBXNativeTarget "CompatibleLayoutAnchorsTests" */;
+			buildPhases = (
+				212C8B201FDF3F4500AF4437 /* Sources */,
+				212C8B211FDF3F4500AF4437 /* Frameworks */,
+				212C8B221FDF3F4500AF4437 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				212C8B2A1FDF3F4500AF4437 /* PBXTargetDependency */,
+			);
+			name = CompatibleLayoutAnchorsTests;
+			productName = CompatibleLayoutAnchorsTests;
+			productReference = 212C8B241FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		21C55F461FD6E06E00987239 /* CompatibleLayoutAnchors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21C55F591FD6E06E00987239 /* Build configuration list for PBXNativeTarget "CompatibleLayoutAnchors" */;
 			buildPhases = (
 				21C55F431FD6E06E00987239 /* Sources */,
 				21C55F441FD6E06E00987239 /* Frameworks */,
@@ -121,9 +181,9 @@
 			);
 			dependencies = (
 			);
-			name = "compatible-layout-anchors-ios";
+			name = CompatibleLayoutAnchors;
 			productName = "compatible-layout-anchors-ios";
-			productReference = 21C55F471FD6E06E00987239 /* compatible-layout-anchors-ios.app */;
+			productReference = 21C55F471FD6E06E00987239 /* CompatibleLayoutAnchors.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,10 +192,15 @@
 		21C55F3F1FD6E06E00987239 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Truffls GmbH";
 				TargetAttributes = {
+					212C8B231FDF3F4500AF4437 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 21C55F461FD6E06E00987239;
+					};
 					21C55F461FD6E06E00987239 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -155,12 +220,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21C55F461FD6E06E00987239 /* compatible-layout-anchors-ios */,
+				21C55F461FD6E06E00987239 /* CompatibleLayoutAnchors */,
+				212C8B231FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		212C8B221FDF3F4500AF4437 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C55F451FD6E06E00987239 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,6 +250,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		212C8B201FDF3F4500AF4437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212C8B271FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C55F431FD6E06E00987239 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +269,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		212C8B2A1FDF3F4500AF4437 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21C55F461FD6E06E00987239 /* CompatibleLayoutAnchors */;
+			targetProxy = 212C8B291FDF3F4500AF4437 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		21C55F531FD6E06E00987239 /* LaunchScreen.storyboard */ = {
@@ -201,6 +290,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		212C8B2C1FDF3F4500AF4437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CompatibleLayoutAnchorsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.truffls.CompatibleLayoutAnchorsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CompatibleLayoutAnchors.app/CompatibleLayoutAnchors";
+			};
+			name = Debug;
+		};
+		212C8B2D1FDF3F4500AF4437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CompatibleLayoutAnchorsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.truffls.CompatibleLayoutAnchorsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CompatibleLayoutAnchors.app/CompatibleLayoutAnchors";
+			};
+			name = Release;
+		};
 		21C55F571FD6E06E00987239 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -318,9 +435,8 @@
 				INFOPLIST_FILE = "compatible-layout-anchors-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.truffls.compatible-layout-anchors-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_MODULE_NAME = CompatibleLayoutAnchors;
+				PRODUCT_NAME = CompatibleLayoutAnchors;
 			};
 			name = Debug;
 		};
@@ -332,15 +448,23 @@
 				INFOPLIST_FILE = "compatible-layout-anchors-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.truffls.compatible-layout-anchors-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_MODULE_NAME = CompatibleLayoutAnchors;
+				PRODUCT_NAME = CompatibleLayoutAnchors;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		212C8B2B1FDF3F4500AF4437 /* Build configuration list for PBXNativeTarget "CompatibleLayoutAnchorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				212C8B2C1FDF3F4500AF4437 /* Debug */,
+				212C8B2D1FDF3F4500AF4437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21C55F421FD6E06E00987239 /* Build configuration list for PBXProject "compatible-layout-anchors-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -350,7 +474,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21C55F591FD6E06E00987239 /* Build configuration list for PBXNativeTarget "compatible-layout-anchors-ios" */ = {
+		21C55F591FD6E06E00987239 /* Build configuration list for PBXNativeTarget "CompatibleLayoutAnchors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21C55F5A1FD6E06E00987239 /* Debug */,
