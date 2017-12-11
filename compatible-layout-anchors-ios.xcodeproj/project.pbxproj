@@ -30,7 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		212C8B161FDF384500AF4437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		212C8B241FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompatibleLayoutAnchorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		212C8B261FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibleLayoutAnchorsTests.swift; sourceTree = "<group>"; };
 		212C8B281FDF3F4500AF4437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,14 +67,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		212C8B131FDF384500AF4437 /* compatible-layout-anchors-UITests */ = {
-			isa = PBXGroup;
-			children = (
-				212C8B161FDF384500AF4437 /* Info.plist */,
-			);
-			path = "compatible-layout-anchors-UITests";
-			sourceTree = "<group>";
-		};
 		212C8B251FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +84,6 @@
 				21C55F601FD6E52900987239 /* README.md */,
 				21C55F5C1FD6E0B900987239 /* Pod */,
 				21C55F491FD6E06E00987239 /* compatible-layout-anchors-ios */,
-				212C8B131FDF384500AF4437 /* compatible-layout-anchors-UITests */,
 				212C8B251FDF3F4500AF4437 /* CompatibleLayoutAnchorsTests */,
 				21C55F481FD6E06E00987239 /* Products */,
 			);
