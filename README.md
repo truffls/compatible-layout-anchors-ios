@@ -28,32 +28,37 @@ It should actually look like this.
 
 Add following to your `Podfile`:
 
-    use_frameworks!
-    pod 'CompatibleLayoutAnchors'
-
+```ruby
+use_frameworks!
+pod 'CompatibleLayoutAnchors'
+```
 
 ### How to use
 
 You have your layout in a NIB file ready with all layout constraints. Reference in your view controller the top constraints connected to the safe area top anchor and the bottom constraints connected to the safe area bottom anchor. Use `assignCompatibleConstraint(_:for:)` to reassign the top and bottom constraints with the appropriate constraints.
 
-    assignCompatibleConstraint(&myTopConstraint, for: .top)
+```swift
+assignCompatibleConstraint(&myTopConstraint, for: .top)
+```
 
 ### Example
 
 This code fits to the screenshots above.
 
-    class ViewController: UIViewController {
+```swift
+class ViewController: UIViewController {
 
-        @IBOutlet weak var headlineLabelTopConstraint: NSLayoutConstraint!
-        @IBOutlet weak var footnoteLabelBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var headlineLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var footnoteLabelBottomConstraint: NSLayoutConstraint!
 
-        override func viewDidLoad() {
-            super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-            assignCompatibleConstraint(&headlineLabelTopConstraint, for: .top)
-            assignCompatibleConstraint(&footnoteLabelBottomConstraint, for: .bottom)
-        }
+        assignCompatibleConstraint(&headlineLabelTopConstraint, for: .top)
+        assignCompatibleConstraint(&footnoteLabelBottomConstraint, for: .bottom)
     }
+}
+```
 
 ### Contribution
 
