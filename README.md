@@ -17,11 +17,9 @@ In a usual workflow you would setup your nib and looking OK in Interface Builder
 
 But in iOS <=10 it looks broken.
 
-![alt text](https://github.com/truffls/compatible-layout-anchors-ios/raw/master/readme-images/before.gif "Broken layout constraints")
-
-It should actually look like this.
-
-![alt text](https://github.com/truffls/compatible-layout-anchors-ios/raw/master/readme-images/after.jpg "Fixed layout constraints")
+| Actual | Expected |
+| ------ | -------- |
+| ![alt text](https://github.com/truffls/compatible-layout-anchors-ios/raw/master/readme-images/before.gif "Broken layout constraints") | ![alt text](https://github.com/truffls/compatible-layout-anchors-ios/raw/master/readme-images/after.jpg "Fixed layout constraints") |
 
 
 ### Install via Cocoapods
