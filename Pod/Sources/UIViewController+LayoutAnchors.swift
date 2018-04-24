@@ -13,10 +13,6 @@ public enum CompatibleLayoutAnchor {
     case bottom
 }
 
-public enum CompatibleLayoutError: Error {
-    case nilConstraintGiven
-}
-
 extension UIViewController {
 
     public var topAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor> {
@@ -39,17 +35,14 @@ extension UIViewController {
         return anchor
     }
 
-    private func subview(from constraint: NSLayoutConstraint!) throws -> UIView? {
-        guard let constraint = constraint else {
-            throw CompatibleLayoutError.nilConstraintGiven
-        }
+    private func subview(from constraint: NSLayoutConstraint) -> UIView? {
         let constraintItems = [constraint.firstItem, constraint.secondItem]
         guard let views = constraintItems as? [UIView] else { return nil }
         return views.filter({ $0 != view }).first
     }
 
-    public func assignCompatibleConstraint(_ constraint: inout NSLayoutConstraint!, for anchor: CompatibleLayoutAnchor) throws {
-        guard let subview = try subview(from: constraint) else { return }
+    public func assignCompatibleConstraint(_ constraint: inout NSLayoutConstraint!, for anchor: CompatibleLayoutAnchor) {
+        guard let subview = subview(from: constraint) else { return }
         switch anchor {
         case .top:
             assignCompatibleVerticalConstraint(&constraint, firstAnchor: subview.topAnchor, secondAnchor: topAnchor)

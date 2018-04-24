@@ -17,81 +17,55 @@ class CompatibleLayoutAnchorsTests: XCTestCase {
     var topConstraint: NSLayoutConstraint!
     var bottomConstraint: NSLayoutConstraint!
 
-    // MARK: - Test Lifecycle
+    // MARK: - Test Case
 
     override func setUp() {
         super.setUp()
-        setupViewControllerWithSubview()
-    }
-
-    override func tearDown() {
-        tearDownViewController()
-        super.tearDown()
-    }
-
-    // MARK: - Setup
-
-    func setupViewControllerWithSubview() {
         viewController = UIViewController()
-        addSubviewToView(viewController.view)
-    }
-
-    func addSubviewToView(_ view: UIView) {
+        let view = viewController.view!
         let subview = UIView()
         subview.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(subview)
-        let constraints = constraintsForView(subview, in: view)
-        view.addConstraints(constraints)
+        topConstraint = view.topAnchor.constraint(equalTo: subview.topAnchor, constant: 16)
+        bottomConstraint = view.bottomAnchor.constraint(equalTo: subview.bottomAnchor, constant: 16)
+        let left = view.leftAnchor.constraint(equalTo: subview.leftAnchor)
+        let right = view.rightAnchor.constraint(equalTo: subview.rightAnchor)
+        view.addConstraints(
+            [ topConstraint, left, right, bottomConstraint ]
+        )
     }
 
-    func constraintsForView(_ view: UIView, in superview: UIView) -> [NSLayoutConstraint] {
-        topConstraint = superview.topAnchor.constraint(equalTo: view.topAnchor, constant: 16)
-        bottomConstraint = superview.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 16)
-        let left = superview.leftAnchor.constraint(equalTo: view.leftAnchor)
-        let right = superview.rightAnchor.constraint(equalTo: view.rightAnchor)
-        return [topConstraint, left, right, bottomConstraint]
-    }
-
-    func tearDownViewController() {
+    override func tearDown() {
         viewController.view.subviews.first?.removeFromSuperview()
         topConstraint = nil
         bottomConstraint = nil
         viewController = nil
+        super.tearDown()
     }
 
     // MARK: - Tests
 
     func testTopLayoutAnchorWasExchanged() {
         let top = topConstraint
-        XCTAssertNoThrow(try viewController.assignCompatibleConstraint(&topConstraint, for: .top))
+        viewController.assignCompatibleConstraint(&topConstraint, for: .top)
         XCTAssertNotEqual(topConstraint, top)
     }
 
     func testBottomLayoutAnchorWasExchanged() {
         let bottom = bottomConstraint
-        XCTAssertNoThrow(try viewController.assignCompatibleConstraint(&bottomConstraint, for: .bottom))
+        viewController.assignCompatibleConstraint(&bottomConstraint, for: .bottom)
         XCTAssertNotEqual(bottomConstraint, bottom)
     }
 
     func testAssignTopConstraintKeepsConstant() {
         let constant = topConstraint.constant
-        XCTAssertNoThrow(try viewController.assignCompatibleConstraint(&topConstraint, for: .top))
+        viewController.assignCompatibleConstraint(&topConstraint, for: .top)
         XCTAssertEqual(topConstraint.constant, constant)
     }
 
     func testAssignBottomConstraintKeepsConstant() {
         let constant = bottomConstraint.constant
-        XCTAssertNoThrow(try viewController.assignCompatibleConstraint(&bottomConstraint, for: .bottom))
+        viewController.assignCompatibleConstraint(&bottomConstraint, for: .bottom)
         XCTAssertEqual(bottomConstraint.constant, constant)
-    }
-
-    func testAssignTopConstraintWithNilParameter() {
-        var constraint: NSLayoutConstraint! = nil
-        XCTAssertThrowsError(try viewController.assignCompatibleConstraint(&constraint, for: .top))
-    }
-
-    func testAssignBottomConstraintWithNilParameter() {
-        var constraint: NSLayoutConstraint! = nil
-        XCTAssertThrowsError(try viewController.assignCompatibleConstraint(&constraint, for: .bottom))
     }
 }
