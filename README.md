@@ -2,7 +2,7 @@
 
 ![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg "Swift 4.1")
 ![Platform Compatibility](https://img.shields.io/badge/platform-ios-lightgrey.svg "Platform iOS")
-![Pod version](https://img.shields.io/badge/pod-v2.0.0-blue.svg "Pod version 2.0.0")
+![Pod version](https://img.shields.io/badge/pod-v2.0.2-blue.svg "Pod version 2.0.2")
 
 An easy way to support iOS 11 safe area anchors and iOS <=10 top/bottom layout guides at the same time. CompatibleLayoutAnchors takes away the boiler plate code to check which layout anchors to use.
 
